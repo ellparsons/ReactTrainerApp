@@ -1,0 +1,33 @@
+.contentBody{
+    margin-left:120px;
+}
+ .navBar{
+     list-style-type: none;
+ }
+
+.navbutton{
+    margin:10px;
+    margin-left:0px;
+}
+
+.backButton{
+    margin-top:10px;
+}
+
+#border{
+    margin-top:20px;
+    padding-left:20px;
+    border:2px solid #000000; 
+    width: 255px;
+    height: 245px; 
+}
+
+.tableVisual{
+    border:1px solid black;
+    background-color: lightgrey;
+    border-collapse: separate;
+    border-spacing: 10px;
+}
+
+
+

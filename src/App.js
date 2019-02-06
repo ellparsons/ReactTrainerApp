@@ -1,28 +1,50 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Header from './Header.js';
+import Table from './Table.js';
+import TableTitle from './TableTitle.js';
+import Backbutton from './Backbutton.js';
+import NavBar from './NavBar.js';
+import Submit from  './Submit.js';
+import Input from './Input.js';
+import Dropdown from './DropdownSelect.js';
+import './Trainer.css';
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
+  constructor(){
+    super();
+    this.state = {
+      header: "Trainer View",
+    
+      trainers : [ {
+        personID: "1",
+        personName: "Joe Bloggs",
+        Time: "9-5",
+      }, {
+      personID: "2",
+        personName: "Bob Smith",
+        Time: "11-3",
+    }, {
+        personID: "3",
+        personName: "Bob Jones",
+        Time: "12-6"
+    },]
+     }
   }
+  render(){
+    return (
+      <div class="contentBody">
+        <Header headerProp={this.state.header} />
+        <NavBar/>
+          <div id="border">
+            <TableTitle/>
+            <div>
+              <Table trainersprop={this.state.trainers}/>
+            </div>
+          </div>  
+      <Backbutton/>
+      </div>
+      );
+    }
 }
 
 export default App;
